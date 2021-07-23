@@ -1,0 +1,27 @@
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  position: relative;
+  width: 100vw;
+  height: 500vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.landingpage {
+  height: 80vh;
+  width: 100vw;
+  background-size: cover;
+  background-image: url('../assets/avw-sfCcyFKQNnU-unsplash.jpg');
+}
+
+
