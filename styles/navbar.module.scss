@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "./inheritance.scss";
 // Navbar Container -----------------------
+.navContainerScrolled {
+  background-color: #eaeaea !important;
+  top: 0 !important;
+  transition-delay: 300ms;
+  transition-duration: 300ms;
+  transition-property: background-color, top;
+}
+
 .navContainer {
   width: 100vw;
   flex-direction: row;
@@ -8,9 +16,20 @@
   align-items: center;
   position: fixed;
   justify-content: space-between;
-  margin-top: 2vh;
   height: 90px;
   z-index: 12;
+  top: 2vh;
+  background-color: rgba($color: #eaeaea, $alpha: 0);
+  transition-delay: 300ms;
+  transition-duration: 300ms;
+  transition-property: background-color, top;
+
+  .logoScrolled {
+    color: #1d1d1d !important;
+    transition-delay: 150ms !important;
+    transition-duration: 150ms !important;
+    transition-property: color !important;
+  }
 
   .logo {
     font-family: "Satoshi", sans-serif;
@@ -37,9 +56,20 @@
     flex-direction: row;
     align-items: center;
 
+    .buttonScrolled {
+      color: #1d1d1d !important;
+      border: 1px solid #1d1d1d !important;
+      transition-delay: 150ms !important;
+      transition-duration: 150ms !important;
+      transition-property: color, border !important;
+    }
+
     .button {
       @extend %cta-button;
       @extend %navbarOut;
+      transition-delay: 500ms;
+      transition-duration: 500ms;
+      transition-property: opacity, color, border;
     }
 
     .buttonInNavbar {
