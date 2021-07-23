@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "./inheritance.scss";
+// Navbar Container -----------------------
+.navContainer {
+  width: 100vw;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  justify-content: space-between;
+  margin-top: 2vh;
+  height: 90px;
+  z-index: 12;
+
+  .logo {
+    font-family: "Satoshi", sans-serif;
+    font-size: 37px;
+    font-variation-settings: "wght" 500;
+    letter-spacing: 1px;
+    margin-left: 10vw;
+    color: #eaeaea;
+    transition-delay: 500ms;
+    transition-duration: 500ms;
+    transition-property: color;
+  }
+
+  .logoInNavbar {
+    color: #ffb703;
+    transition-delay: 500ms;
+    transition-duration: 500ms;
+    transition-property: color;
+  }
+
+  .rightContainer {
+    margin-right: 10vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .button {
+      @extend %cta-button;
+      transition-delay: 500ms;
+      transition-duration: 500ms;
+      transition-property: background-color, color;
+    }
+
+    .buttonInNavbar {
+      background-color: #eaeaea;
+      color: #1d1d1d;
+      transition-delay: 500ms;
+      transition-duration: 500ms;
+      transition-property: background-color, color;
+    }
+
+    // Mobile Devices Button
+    @media (max-width: 800px) {
+      .button {
+        opacity: 0 !important;
+        pointer-events: none !important;
+      }
+    }
+  }
+}
+
+// Nav Menu ---------------------------------------------
+
+.navMenuContainer {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  transition-delay: 500ms;
+  transition-duration: 500ms;
+  transition-property: opacity;
+  background-color: #eaeaea;
+  z-index: 11;
+  display: flex;
+  flex-direction: row;
+
+  .menuLeftContainer {
+    background-color: #eaeaea;
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .navMenu {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10vw;
+
+      .navMenuItem {
+        // font-family: "Sentient", serif;
+        // font-variation-settings: "wght" 400;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        color: #1d1d1d;
+        text-decoration: none;
+        font-size: 50px;
+        margin: 10px 0px 10px 0px;
+        width: fit-content;
+      }
+
+      .navMenuItem:after {
+        background: none repeat scroll 0 0 transparent;
+        content: "";
+        display: block;
+        height: 5px;
+        left: 50%;
+        background: #ffb703;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+      .navMenuItem:hover:after {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+
+  .menuRightContainer {
+    background-image: url("../assets/geometryyellow.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 50vw;
+    opacity: 0.95;
+  }
+
+  // Mobile Devices Nav Menu
+  @media (max-width: 800px) {
+    .menuRightContainer {
+      opacity: 0 !important;
+      pointer-events: none;
+    }
+
+    .menuLeftContainer {
+      width: 100vw;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .navMenuItem {
+      font-size: 40px !important;
+    }
+  }
+}
+
+.menuClosed {
+  opacity: 0;
+  pointer-events: none;
+  transition-delay: 500ms;
+  transition-duration: 500ms;
+  transition-property: opacity;
+  z-index: 1;
+}

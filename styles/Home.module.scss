@@ -1,6 +1,5 @@
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,7 +20,5 @@
   height: 80vh;
   width: 100vw;
   background-size: cover;
-  background-image: url('../assets/avw-sfCcyFKQNnU-unsplash.jpg');
+  background-image: url("../assets/architecture.jpg");
 }
-
-

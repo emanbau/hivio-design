@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import Navbar from '../components/navbar/Navbar'
 import styles from '../styles/Home.module.scss'
 
 export default function Home() {
@@ -12,6 +12,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <Navbar />
         <div className={styles.landingpage}></div>
       </main>
     </div>
