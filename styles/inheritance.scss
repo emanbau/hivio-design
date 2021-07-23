@@ -28,8 +28,8 @@
   padding: 15px 32px 15px 32px;
   display: flex;
   align-items: center;
-  font-family: "Satoshi", sans-serif;
-  font-variation-settings: "wght" 500;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   letter-spacing: 0.5px;
   font-size: 16px;
   background: none;
@@ -49,13 +49,19 @@
   line-height: 2em;
 }
 
-%header {
+%landingpageHeader {
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 40px;
 }
 
-%header2 {
+%landingpageHeader2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+%sectionHeader {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   letter-spacing: 2px;

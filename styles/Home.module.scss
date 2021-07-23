@@ -1,3 +1,5 @@
+@import "./inheritance.scss";
+
 .container {
   min-height: 100vh;
   display: flex;
@@ -16,9 +18,114 @@
   align-items: center;
 }
 
+.landingpage::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 80vh;
+  width: 100vw;
+  display: block;
+  background-color: black;
+  opacity: 0.4;
+}
+
 .landingpage {
   height: 80vh;
   width: 100vw;
   background-size: cover;
   background-image: url("../assets/architecture.jpg");
+
+  .landingpageCopyContainerInNavbar {
+    @extend %navbarIn;
+  }
+
+  .landingpageCopyContainerOutNavbar {
+    @extend %navbarOut;
+  }
+
+  .landingpageCopyContainer {
+    width: 100%;
+    height: 50%;
+    margin: auto;
+    position: absolute;
+    left: 10vw;
+    top: 300px;
+    z-index: 2;
+
+    .landingpageCopyHeader {
+      @extend %landingpageHeader;
+      color: #eaeaea;
+    }
+
+    .landingpageCopyHeader2 {
+      @extend %landingpageHeader2;
+      color: #eaeaea;
+    }
+
+    .landingpageCopyParagraph {
+    }
+
+    .landingPageButton {
+    }
+  }
+
+  // Mobile Devices
+
+  @media (min-width: 501px) and (max-width: 800px) {
+    .landingpageCopyHeader {
+      font-size: 40px;
+    }
+
+    .landingpageCopyHeader2 {
+      font-size: 40px;
+    }
+
+    .landingpageCopyParagraph {
+      font-size: 16px;
+      width: 400px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .landingpageCopyContainer {
+      top: 25vh;
+
+      .landingpageCopyHeader {
+        font-size: 35px;
+        letter-spacing: 5px;
+      }
+
+      .landingpageCopyHeader2 {
+        font-size: 35px;
+        width: 250px;
+      }
+    }
+  }
+
+  @media (max-height: 700px) {
+    .landingpageCopyContainer {
+      top: 25vh;
+
+      .landingpageCopyHeader {
+        font-size: 20px;
+        letter-spacing: 5px;
+      }
+
+      .landingpageCopyHeader2 {
+        font-size: 20px;
+        letter-spacing: 5px;
+      }
+
+      .landingpageCopyParagraph {
+        font-size: 14px;
+        width: 250px;
+        margin-top: 5px;
+      }
+
+      .landingPageButton {
+        font-size: 12px;
+        margin-top: 15px;
+      }
+    }
+  }
 }

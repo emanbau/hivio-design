@@ -23,7 +23,7 @@ function Navbar() {
                 <div className={styles.rightContainer}>
                     <button className={inNavbar ? `${styles.button} ${styles.buttonInNavbar}` : styles.button}>Work With Us</button>
                     <div>
-                        <Hamburger toggled={inNavbar} toggle={navbarHandle} color={inNavbar ? ((window.innerWidth <= 800) ? '#1d1d1d' : '#eaeaea') : '#eaeaea'} duration={1} />
+                        <Hamburger toggled={inNavbar} toggle={navbarHandle} color={inNavbar ? ((window.innerWidth <= 800) ? '#1d1d1d' : '#eaeaea') : '#eaeaea'} duration={1} size={40} />
                     </div>
                 </div>
             </nav>
