@@ -41,12 +41,11 @@
   height: fit-content;
 }
 
-%paragraph {
-  font-family: "Satoshi", sans-serif;
-  font-variation-settings: "wght" 400;
-  letter-spacing: 0.5px;
+%ctaText {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
   font-size: 18px;
-  line-height: 2em;
 }
 
 %landingpageHeader {
@@ -59,6 +58,22 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 40px;
+}
+
+%landingpageParagraph {
+  font-family: "Satoshi", sans-serif;
+  font-variation-settings: "wght" 400;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  line-height: 2em;
+}
+
+%paragraph {
+  font-family: "Satoshi", sans-serif;
+  font-variation-settings: "wght" 400;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  line-height: 2em;
 }
 
 %sectionHeader {

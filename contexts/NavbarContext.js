@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useState, useContext } from 'react'
 
 // Context for inNavbar for general styling (ex. landing page copy)
 export const NavbarContext = createContext({
@@ -26,5 +26,9 @@ export function NavbarContextProvider({ children }) {
             {children}
         </NavbarContext.Provider>
     )
+}
+
+export function useNavbarContext () {
+    return useContext(NavbarContext);
 }
 

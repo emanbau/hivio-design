@@ -1,12 +1,13 @@
 import Head from 'next/head'
 import Navbar from '../components/navbar/Navbar'
 import styles from '../styles/Home.module.scss'
-import React, { useContext } from 'react';
-import { NavbarContext } from '../contexts/NavbarContext';
+import React from 'react';
+import { useNavbarContext } from '../contexts/NavbarContext';
+import Link from 'next/link';
 
 export default function Home() {
   // Navbar Context
-  const navbarContext = useContext(NavbarContext);
+  const navbarContext = useNavbarContext();
   // Navbar State
   const inNavbar = navbarContext.inNavbar;
 
@@ -26,6 +27,8 @@ export default function Home() {
               <br />
               <span className={styles.landingpageCopyHeader2}>+ CREATIVE THINKING</span>
             </h1>
+            <p className={styles.landingpageCopyParagraph}>A dedicated software development team that delivers with deep expertise, experience, and efficiency.</p>
+            <span className={styles.landingpageCta}><Link href='/#services'><a>SEE WHAT WE DO &rarr;</a></Link></span>
           </div>
         </div>
 
