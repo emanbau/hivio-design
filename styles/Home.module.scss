@@ -140,3 +140,31 @@
     }
   }
 }
+
+.aboutContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e5e4e4;
+  overflow-y: visible;
+
+  .aboutHeader {
+    @extend %sectionHeader;
+    margin-top: 100px;
+  }
+
+  .aboutParagraph {
+    @extend %paragraph;
+    text-align: center;
+    width: 50vw;
+  }
+
+  .aboutImageContainer {
+    margin-top: 50px;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+  }
+}

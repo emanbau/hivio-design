@@ -16,10 +16,7 @@ function Navbar() {
     }
 
     // Navbar Scroll State & Handle
-    const scrollPast80 = navbarContext.scrollPast80;
-    const scrollPast80Handle = useCallback((boolean) => {
-        navbarContext.setScrollPast80(boolean);
-    }, [navbarContext]);
+    const [scrollPast80, setScrollPast80] = useState(false);
 
     // Y Scroll State
     const [y, setY] = useState(0);
@@ -31,18 +28,17 @@ function Navbar() {
         }
 
         if (window.scrollY >= 80) {
-            scrollPast80Handle(true);
+            setScrollPast80(true);
         } else {
-            scrollPast80Handle(false);
+            setScrollPast80(false);
         }
 
         return () => {
             window.removeEventListener('scroll', onWindowScroll);
         }
 
-    }, [y, scrollPast80Handle])
+    }, [y])
 
-    console.log(inNavbar);
 
     return (
         <React.Fragment>

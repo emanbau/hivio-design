@@ -4,8 +4,6 @@ import { createContext, useState, useContext } from 'react'
 export const NavbarContext = createContext({
     inNavbar: false,
     setInNavbar: () => { },
-    scrollPast80: false,
-    setScrollPast80: () => { },
 });
 
 export function NavbarContextProvider({ children }) {
@@ -15,14 +13,8 @@ export function NavbarContextProvider({ children }) {
         setInNavbar(!inNavbar)
     }
 
-    const [scrollPast80, setScrollPast80] = useState(false);
-
-    const setScrollPast80Handle = (boolean) => {
-        setScrollPast80(boolean)
-    }
-
     return (
-        <NavbarContext.Provider value={{ inNavbar: inNavbar, setInNavbar: setInNavbarHandle, scrollPast80: scrollPast80, setScrollPast80: setScrollPast80Handle }}>
+        <NavbarContext.Provider value={{ inNavbar: inNavbar, setInNavbar: setInNavbarHandle }}>
             {children}
         </NavbarContext.Provider>
     )

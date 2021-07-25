@@ -4,8 +4,7 @@
 .navContainerScrolled {
   background-color: #eaeaea !important;
   top: 0 !important;
-  transition-delay: 300ms;
-  transition-duration: 300ms;
+  transition-duration: 100ms;
   transition-property: background-color, top;
 }
 
@@ -26,8 +25,8 @@
 
   .logoScrolled {
     color: #1d1d1d !important;
-    transition-delay: 150ms !important;
-    transition-duration: 150ms !important;
+    transition-delay: 100ms !important;
+    transition-duration: 100ms !important;
     transition-property: color !important;
   }
 
@@ -59,8 +58,8 @@
     .buttonScrolled {
       color: #1d1d1d !important;
       border: 1px solid #1d1d1d !important;
-      transition-delay: 150ms !important;
-      transition-duration: 150ms !important;
+      transition-delay: 100ms !important;
+      transition-duration: 100ms !important;
       transition-property: color, border !important;
     }
 
