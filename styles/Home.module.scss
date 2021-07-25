@@ -190,4 +190,9 @@
     @extend %sectionHeader;
     margin-top: 100px;
   }
+
+  .servicesCardContainer {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+  }
 }
