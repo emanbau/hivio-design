@@ -143,7 +143,7 @@
 
 .aboutContainer {
   width: 100vw;
-  height: 100vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -166,5 +166,28 @@
     width: 80vw;
     display: flex;
     justify-content: center;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 800px) {
+  .aboutParagraph {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .aboutParagraph {
+    font-size: 16px !important;
+    width: 90vw !important;
+  }
+}
+
+.servicesContainer {
+  @extend %sectionContainer;
+  background-color: #e5e4e4;
+
+  .servicesHeader {
+    @extend %sectionHeader;
+    margin-top: 100px;
   }
 }

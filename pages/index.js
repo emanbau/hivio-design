@@ -51,7 +51,10 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.servicesContainer} id='services'>
-
+          <h1 className={styles.servicesHeader}>WHAT WE DO</h1>
+          <div className={styles.servicesCardContainer}>
+            
+          </div>
         </div>
       </main>
     </div>
