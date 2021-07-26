@@ -19,7 +19,10 @@ export default function Home() {
   const serviceCards = services.map((service) => {
     return(
       <Card key={service.service} variant='outlined' className={styles.serviceCard}>
-        <h1 className={styles.serviceCardHeader}>{service.service}</h1>
+        <div className={styles.serviceCardHeaderContainer}>
+          {service.icon()}
+          <h1 className={styles.serviceCardHeader}>{service.service}</h1>
+        </div>
         <p className={styles.serviceCardParagraph}>{service.paragraph}</p>
         <ul className={styles.serviceCardList}>
           {service.list.map((item) => {

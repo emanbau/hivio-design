@@ -202,9 +202,17 @@
       background-color: #eaeaea;
       padding: 25px;
 
-      .serviceCardHeader {
-        @extend %serviceCardHeader;
-        height: 50px;
+      .serviceCardHeaderContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        height: 75px;
+
+        .serviceCardHeader {
+          @extend %serviceCardHeaders;
+          margin-left: 15px;
+        }
       }
 
       .serviceCardParagraph {
