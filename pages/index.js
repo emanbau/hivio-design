@@ -6,12 +6,31 @@ import { useNavbarContext } from '../contexts/NavbarContext';
 import Link from 'next/link';
 import Image from 'next/image';
 import Winery from '../assets/winery.jpg'
+import { services } from '../components/servicesCards/services';
+import Card from '@material-ui/core/Card';
 
 export default function Home() {
   // Navbar Context
   const navbarContext = useNavbarContext();
   // Navbar State
   const inNavbar = navbarContext.inNavbar;
+
+  // Services Component
+  const serviceCards = services.map((service) => {
+    return(
+      <Card key={service.service} variant='outlined' className={styles.serviceCard}>
+        <h1 className={styles.serviceCardHeader}>{service.service}</h1>
+        <p className={styles.serviceCardParagraph}>{service.paragraph}</p>
+        <ul className={styles.serviceCardList}>
+          {service.list.map((item) => {
+            return(
+              <li key={item} className={styles.serviceCardListItem}>{item}</li>
+            )
+          })}
+        </ul>
+      </Card>
+    )
+  })
 
   return (
     <div className={styles.container}>
@@ -53,7 +72,7 @@ export default function Home() {
         <div className={styles.servicesContainer} id='services'>
           <h1 className={styles.servicesHeader}>WHAT WE DO</h1>
           <div className={styles.servicesCardContainer}>
-            
+            {serviceCards}
           </div>
         </div>
       </main>

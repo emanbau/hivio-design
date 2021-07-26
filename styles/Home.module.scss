@@ -194,5 +194,31 @@
   .servicesCardContainer {
     display: grid;
     grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 400px 400px 400px;
+    grid-gap: 50px;
+    margin-top: 50px;
+
+    .serviceCard {
+      background-color: #eaeaea;
+      padding: 25px;
+
+      .serviceCardHeader {
+        @extend %serviceCardHeader;
+        height: 50px;
+      }
+
+      .serviceCardParagraph {
+        @extend %serviceCardParagraph;
+      }
+
+      .serviceCardList {
+        margin: 25px 0 0 25px;
+        padding-left: 0;
+
+        .serviceCardListItem {
+          @extend %serviceCardParagraph;
+        }
+      }
+    }
   }
 }
